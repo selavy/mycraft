@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-O0 -g -Wall -Werror
-LDFLAGS=-lGLU -lGL -lglut -lGLEW
+LDFLAGS=-lGLU -lGL -lglut -lGLEW -lglfw
 SOURCES=main.c
 PROG=mycraft
 OBJS=$(SOURCES:.c=.o)

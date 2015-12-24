@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-O0 -g -Wall -Werror
-LDFLAGS=-lGL
+LDFLAGS=-lGLU -lGL -lglut -lGLEW
 SOURCES=main.c
 PROG=mycraft
 OBJS=$(SOURCES:.c=.o)
@@ -8,7 +8,7 @@ OBJS=$(SOURCES:.c=.o)
 all: $(SOURCES) $(PROG)
 
 $(PROG): $(OBJS)
-	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS) -o $@
+	$(CC) $(OBJS) $(CFLAGS) $(LDFLAGS) -o $@
 
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $@
